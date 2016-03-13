@@ -36,10 +36,10 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"file": "js/builder.js",
 			"settings":
 			{
-				"buffer_size": 1858,
+				"buffer_size": 2044,
 				"line_ending": "Windows"
 			}
 		},
@@ -47,15 +47,7 @@
 			"file": "js/work.js",
 			"settings":
 			{
-				"buffer_size": 1837,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/resumeBuilder.js",
-			"settings":
-			{
-				"buffer_size": 2113,
+				"buffer_size": 1988,
 				"line_ending": "Windows"
 			}
 		},
@@ -63,7 +55,7 @@
 			"file": "js/bio.js",
 			"settings":
 			{
-				"buffer_size": 3259,
+				"buffer_size": 2971,
 				"line_ending": "Windows"
 			}
 		},
@@ -71,7 +63,15 @@
 			"file": "js/education.js",
 			"settings":
 			{
-				"buffer_size": 2490,
+				"buffer_size": 2875,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 4390,
 				"line_ending": "Windows"
 			}
 		},
@@ -79,7 +79,7 @@
 			"file": "css/style.css",
 			"settings":
 			{
-				"buffer_size": 4011,
+				"buffer_size": 9144,
 				"line_ending": "Windows"
 			}
 		}
@@ -147,17 +147,21 @@
 	"expanded_folders":
 	[
 		"/D/Workspace/LTU/AboutMe",
-		"/D/Workspace/LTU/AboutMe/css",
 		"/D/Workspace/LTU/AboutMe/images",
-		"/D/Workspace/LTU/AboutMe/js"
+		"/D/Workspace/LTU/AboutMe/js",
+		"/D/Workspace/LTU/AboutMe/pdf"
 	],
 	"file_history":
 	[
+		"/D/Workspace/LTU/AboutMe/js/education.js",
+		"/D/Workspace/adhoc/CSSReset.com - Keeping Footer At The Bottom Of The Page/style.css",
+		"/D/Workspace/adhoc/CSSReset.com - Keeping Footer At The Bottom Of The Page/index.html",
+		"/C/Users/Niels/Downloads/CSSReset.com - Keeping Footer At The Bottom Of The Page.zip",
+		"/C/Users/Niels/Desktop/Resume.html",
 		"/D/Workspace/LTU/AboutMe/images/js/resumeBuilder.js",
 		"/D/Workspace/LTU/AboutMe/images/js/bio.js",
 		"/D/Workspace/LTU/AboutMe/js/work.js",
 		"/D/Workspace/LTU/AboutMe/js/resumeBuilder.js",
-		"/D/Workspace/LTU/AboutMe/js/education.js",
 		"/D/Workspace/LTU/AboutMe/js/bio.js",
 		"/C/Users/Niels/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
 		"/D/Workspace/LTU/AboutMe/AboutMe.sublime-project",
@@ -262,54 +266,24 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "js/builder.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1858,
+						"buffer_size": 2044,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								447,
-								447
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "js/work.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1837,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								257,
-								257
+								789,
+								789
 							]
 						],
 						"settings":
@@ -326,20 +300,50 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "js/resumeBuilder.js",
+					"buffer": 1,
+					"file": "js/work.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2113,
+						"buffer_size": 1988,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1827,
-								1827
+								1813,
+								1813
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/bio.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2971,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2763,
+								2783
 							]
 						],
 						"settings":
@@ -357,19 +361,19 @@
 				},
 				{
 					"buffer": 3,
-					"file": "js/bio.js",
+					"file": "js/education.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3259,
+						"buffer_size": 2875,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1589,
-								1589
+								1399,
+								1399
 							]
 						],
 						"settings":
@@ -387,32 +391,32 @@
 				},
 				{
 					"buffer": 4,
-					"file": "js/education.js",
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2490,
+						"buffer_size": 4390,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								900,
-								900
+								1041,
+								1041
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
+						"translation.x": 0.0,
+						"translation.y": 357.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -421,15 +425,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4011,
+						"buffer_size": 9144,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								619,
-								619
+								999,
+								999
 							]
 						],
 						"settings":
@@ -439,10 +443,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 153.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

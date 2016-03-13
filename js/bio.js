@@ -1,29 +1,23 @@
 var bio = {
     "htmlOuterSkills": "<br><h4>Skills</h4><ul id=\"skills-list\" class=\"flex flex-wrap flex-right flex-start\"></ul>",
+    "htmlOuterContact": "<ul id=\"contact-list\" class=\"flex flex-wrap flex-right flex-center\"></ul>",
     "htmlInnerTemplates": [{
-        "bio-pic": "<div class=\"bgcolor-1 color-white\"><div class=\"bio-pic-sizer center\"><img src=\"%data%\" class=\"bio-pic\"></div>",
-        "name": "<h1 class=\"text-center\" id=\"name\">%data%</h1>",
-        "role": "<h3 class=\"text-center space-below-10\" id=\"role\">%data%</h3></div>",
+        "bio-pic": "<div class=\"bgcolor-1 color-white\"><div class=\"bio-pic-sizer center\"><img src=\"%data%\" class=\"bio-pic\" ",
+        "alt": "alt=\"%data%\"></div>",
+        "name": "<h1 class=\"text-thin text-center\" id=\"name\">%data%</h1>",
+        "role": "<h3 class=\"text-thin text-center space-below-10\" id=\"role\">%data%</h3></div>",
         "description": "<h4>About Me</h4><article>%data%</article>"
     }, {
-        "contactGeneric": "<li class=\"flex-item\"><span class=\"orange-text\">%contact%</span><span class=\"white-text\">%data%</span></li>"
-    }, {
-        "mobile": "<li class=\"flex-item\"><span class=\"orange-text\">mobile</span><span class=\"white-text\">%data%</span></li>"
-    }, {
-        "email": "<li class=\"flex-item\"><span class=\"orange-text\">email</span><span class=\"white-tex\">%data%</span></li>"
-    }, {
-        "twitter": "<li class=\"flex-item\"><span class=\"orange-text\">twitter</span><span class=\"white-text\">%data%</span></li>"
-    }, {
-        "github": "<li class=\"flex-item\"><span class=\"orange-text\">github</span><span class=\"white-text\">%data%</span></li>"
-    }, {
-        "blog": "<li class=\"flex-item\"><span class=\"orange-text\">blog</span><span class=\"white-text\">%data%</span></li>"
-    }, {
-        "location": "<li class=\"flex-item\"><span class=\"orange-text\">location</span><span class=\"white-text\">%data%</span></li>"
+        "mobile": "<li class=\"contact-entry bgcolor-3 color-white shadow\"><p>%data%</p></li>",
+        "email": "<li class=\"contact-entry bgcolor-3 color-white shadow\"><p>%data%</p></li>",
+        "github": "<li class=\"contact-entry bgcolor-3 color-white shadow\"><a target=\"blank_\" href=\"%data%\"><p>github</p></a></li>",
+        "linkedin": "<li class=\"contact-entry bgcolor-3 color-white shadow\"><a target=\"blank_\" href=\"%data%\"><p>LinkedIn</p></a></li>"
     }, {
         "skills": "<li class=\"skill-entry bgcolor-1 color-white shadow\"><a target=\"blank_\" href=\"http://www.google.com/search?q=%data%\">%data%</a></li>"
     }],
     "headerInfo": [{
-        "bio-pic": "http://oi66.tinypic.com/ndm13n.jpg",
+        "bio-pic": "images/NLP.png",
+        "alt" : "Picture of Niels Lindberg-Poulsen",
         "name": "Niels Lindberg-Poulsen",
         "role": "Student at LTU, ORU & Udacity",
         "description": "Hi, my name is Niels, I'm 26 years old and live in Copenhagen together with my Swedish girlfriend who is studying Business & IT.<br><br>\
@@ -38,7 +32,7 @@ var bio = {
         "mobile": "+4527490778",
         "email": "eighthourcream@gmail.com",
         "github": "https://github.com/NielsLindberg",
-        "location": "Copenhagen, Nørrebro, Denmark"
+        "linkedin": "https://dk.linkedin.com/in/niels-lindberg-poulsen-440ab335"
     }],
     "skillsInfo": [{
         "skills": ["Business Intelligence", "Data Blending", "Qlikview", "ETL", "SQL", "Financial Analysis", "VBA", "Teradata", "Oracle", "Microsoft SQL Server", "Excel", "HTML", "CSS", "JavaScript", "Java", "Polymer"]

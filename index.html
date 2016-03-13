@@ -3,48 +3,79 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Resume</title>
+    <title>Niels Lindberg-Poulsen, Portfolio</title>
+    <!-- Load font-type: Lato with weights 400 & 300 -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+    <!-- Load stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/jQuery.js"></script>
+    <!-- Load minified jQuery from google cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width">
 </head>
 
-<body class="bgcolor-2">
-    <div class="header-wrapper">
-        <div class="header bgcolor-white color-3 shadow">
-        </div>
-    </div>
-    <div id="main" class="content-wrapper flex flex-down bgcolor-white shadow">
-       <div id="bio" class="flex-flex-down space-above">
-            <h2 class="section-header">Bio</h2>
-            <div id="bioContainer" class="bio-container border flex flex-wrap flex-down bgcolor-white shadow">
-            </div>
-        </div>
-        <div id="skills" class="flex flex-down space-above">
-            <div id="skillsContainer" class="flex flex-wrap flex-center flex-right">
-            </div>
-        </div>
-        <div id="workExperience" class="flex flex-down space-above">
-            <h2 class="section-header">Work Experience</h2>
-            <div id="workExperienceContainer" class="flex flex-wrap flex-right">
-            </div>
-        </div>
-        <div id="education" class="flex flex-down space-above">
-            <h2 class="section-header">Education</h2>
-            <div id="educationContainer" class="flex flex-wrap flex-right">
-            </div>
-        </div>
-        <div id="lets-connect">
-            <h2 class="section-header">Let's Connect</h2>
-            <ul id="footerContacts" class="flex flex-wrap flex-right">
+<body>
+    <!-- Put everything in the page inside a wrapper, when using flex-1 on #content it will expand in the flex-direction to fill page-->
+    <div id="wrapper" class="bgcolor-2 flex flex-down">
+        <!-- Header Container -->
+        <div id="header" class="bgcolor-4 shadow">
+            <!-- Header Navigation, childs flexes on the horizontal pane from the center-->
+            <ul class="navigation flex flex-right flex-center">
+                <!-- Navigation links -->
+                <li><a href="index.html"><h3 class="text-center">Home</h3></a></li>
+                <li><a href="projects.html"><h3 class="text-center">Projects</h3></a></li>
             </ul>
         </div>
+        <!-- content wrapper takes up all space from top down to footer-->
+        <div id="content" class="flex flex-down flex-1 bgcolor-white shadow">
+            <!-- bio wrapper holding the header and bio container -->
+            <div id="bio" class="flex flex-down space-above">
+                <!-- header for bio container -->
+                <h2 class="section-header text-center">Bio</h2>
+                <!-- bio container -->
+                <div id="bioContainer" class="bio-container border flex flex-down bgcolor-white shadow">
+                    <!-- Dynamic Dom insertion of bio info using the DisplayStuff function imported from builder.js
+                    on bio.js bio object -->
+                </div>
+            </div>
+            <!-- work wrapper holding the header and the work entries-->
+            <div id="workExperience" class="flex flex-down space-above">
+                <!-- work container header -->
+                <h2 class="section-header text-center">Work Experience</h2>
+                <!-- work container holding all the work-entries -->
+                <div id="workExperienceContainer" class="flex flex-wrap flex-right">
+                    <!-- Dynamic Dom insertion of work info using the DisplayStuff function imported from builder.js
+                    on the work.js work object-->
+                </div>
+            </div>
+            <!-- education wrapper holding the header and education container -->
+            <div id="education" class="flex flex-down space-above">
+                <!-- header for education container-->
+                <h2 class="section-header text-center">Education</h2>
+                <!-- education container holding all the education-entries-->
+                <div id="educationContainer" class="flex flex-wrap flex-right">
+                    <!-- Dynamic Dom insertion of education info using the DisplayStuff function imported from builder.js
+                    on education.js education object-->
+                </div>
+            </div>
+        </div>
+        <!-- Footer wrapper -->
+        <div id="footer" class="bgcolor-4 shadow-reverse">
+            <!-- Dynamic Dom insertion of contact info using the DisplayStuff function imported from builder.js -->
+        </div>
     </div>
+    <!-- load data and dom elements from bio.js/education.js/work.js and the displayStuff function from builder.js-->
     <script src="js/bio.js"></script>
     <script src="js/education.js"></script>
     <script src="js/work.js"></script>
-    <script src="js/resumeBuilder.js"></script>
+    <script src="js/builder.js"></script>
+    <script>
+    /* Insert DOM elements into the page */
+    displayStuff('#bioContainer', '#bioContainer', bio, bio.headerInfo, '');
+    displayStuff('#bioContainer', '#skills-list', bio, bio.skillsInfo, bio.htmlOuterSkills);
+    displayStuff('#educationContainer', '.education-entry:last', education, education.schools, education.htmlOuterTemplate);
+    displayStuff('#workExperienceContainer', '.work-entry:last', work, work.jobs, work.htmlOuterTemplate);
+    displayStuff('#footer', '#contact-list', bio, bio.contactInfo, bio.htmlOuterContact);
+    </script>
 </body>
 
 </html>

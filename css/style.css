@@ -1,242 +1,308 @@
+/* Set default font to Lato, remove margins & paddings from body */
 body {
     font-family: 'Lato', sans-serif;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 }
 
+/* Remove list decorations and margin / paddings */
 ul {
     list-style-type: none;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
 }
 
+/* Set default horizontal ruler to 1px with lightgrey color */
 hr {
     border: 0;
     height: 1px;
     background: #e6e6e6;
-    clear:both;
-    display:block;
 }
 
+/* set default article font-size to 14px with 5px padding */
 article {
     font-size:14px;
     padding:5px;
 }
+
+/* set default links to white with no decoration */
 a, a:visited, a:active, a:hover {
     color: rgb(255,255,255);
     text-decoration:none;
 }
 
+/* set navigation decoration to inline, with black text and 10px padding on each side */
+.navigation a {
+display: inline-block;
+color: rgb(0,0,0);
+padding-left:10px;
+padding-right:10px;
+}
+
+/* Create red underline that appears after 0.5 seconds when hovering navigation links */
+.navigation a:after {
+content: '';
+display: block;
+width: 100%;
+background: transparent;
+transition: background-color 0.5s ease;
+}
+
+.navigation a:hover:after {
+height: 3px;
+background-color: rgb(255,107,107);
+}
+
+/*Set navigation height to 50px and lineheight to 47px making text centered and leaving room for the 3px underline */
+.navigation li {
+  height:50px;
+  line-height:47px;
+}
+
+/*change background of skill entry to red when hovering */
 .skill-entry:hover {
-    background-color: rgb(245,98,24);
+    background-color: rgb(255,107,107);
 }
 
+/*change background of overlay to red with opacity 80% when hovering, or red if browser doesnt support rgba */
 .overlay:hover  {
-    background-color: rgb(245,98,24);
-    background-color: rgba(245,98,24,0.8);
+    background-color: rgb(255,107,107);
+    background-color: rgba(255,107,107,0.8);
 }
 
+/*set default <p> to font-size 14px and remove margins */
 p {
     margin:0 0 0 0;
     font-size:14px;
 }
 
+/* remove paddings & margins from h1,h2,h3 */
 h1,h2,h3 {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    font-weight:300;
 }
 
+/* remove margins from h4 and add 5px padding */
 h4 {
     margin:0 0 0 0;
     padding: 5px;
 }
+
+/* create class for font-weight 300*/
+.text-thin {
+    font-weight: 300;
+}
+
+/* create classes for background colors (been changing the color theme alot so having only to change colors in the classes was alot easier*/
 .bgcolor-1 {
-    background-color: rgb(145,145,103);
+    background-color: rgb(85,98,112);
 }
 
 .bgcolor-1-op {
-    background-color: rgb(145,145,103);
-    background-color: rgba(145,145,103,0.8);
+    background-color: rgb(85,98,112);
+    background-color: rgba(85,98,112,0.8);
 }
 
 .bgcolor-2 {
-    background-color: rgb(157,201,172);
+    background-color: rgb(236,241,242);
+}
+.bgcolor-2-op {
+    background-color: rgb(236,241,242);
+    background-color: rgba(236,241,242,0.5);
 }
 
 .bgcolor-3 {
-    background-color: rgb(255,157,46);
+    background-color: rgb(255,107,107);
 }
 
 .bgcolor-3-op {
-    background-color: rgb(255,157,46);
-    background-color: rgba(255,157,46,0.8);
+    background-color: rgb(255,107,107);
+    background-color: rgba(255,107,107,0.8);
 }
 .bgcolor-4 {
-    background-color: rgb(245,98,24);
+    background-color: rgb(220,232,235);
 }
 
 .bgcolor-4-op {
-    background-color: rgb(245,98,24);
-    background-color: rgba(245,98,24,0.8);
+    background-color: rgb(220,232,235);
+    background-color: rgba(220,232,235,0.8);
 }
 .bgcolor-5 {
-    background-color: rgb(255,254,199);
+    background-color: rgb(199,244,100);
+}
+.bgcolor-5-op {
+    background-color: rgb(199,244,100);
+    background-color: rgba(199,244,100,0.5);
 }
 
 .bgcolor-white {
     background-color: rgb(255,255,255);
 }
 
+/* class to make text white */
 .color-white {
     color: rgb(255,255,255);
 }
 
-.color-1 {
-    color: rgb(145,145,103);
-}
-
-.color-2 {
-    color: rgb(157,201,172);
-}
-
-.color-3 {
-    color: rgb(255,157,46);
-}
-
-.color-4 {
-    color: rgb(245,98,24);
-}
-
-.color-5 {
-    color: rgb(255,254,199);
-}
-
+/* class to add a grey border to an element */
 .border {
     border: 1px solid #eeeeee;
 }
 
+/* class for flex priority 1 (used on the content wrapper to extend down to footer*/
+.flex-1 {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+/* class to apply display flex to an element */
 .flex {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
 }
 
+/* class to tell flex elements to wrap down if not enough space is available */
 .flex-wrap {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
+/* class to add flex direction in the horizontal pane */
 .flex-right {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
 }
 
+/* class to add flex direction in the vertical pane */
 .flex-down {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
 }
 
-.flex-start {
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-}
-
+/* class to add flex direction center making elements grow from the center and outwards */
 .flex-center {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
 }
 
+/* class to tell text to align in the horizontal center of container */
 .text-center {
     text-align: center;
 }
 
+/* class to tell text to align on the right side of the container */
 .text-right {
     text-align: right;
 }
 
-.float-left {
-    float:left;
-}
-
-.float-right {
-    float:right;
-}
-
+/* class to add 20 margin above an element */
 .space-above {
     margin-top:20px;
 }
 
+/* class to add 10 margins under an element */
 .space-below-10 {
     margin-bottom: 10px;
 }
 
+/* class to center an element within its container by adding equal margins on all sides */
 .center {
     margin: auto;
 }
 
+/* class to add a grey shadow 1px down 1px right to an element */
 .shadow {
     box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2);
 }
 
-.header-wrapper {
+/* class to add a grey shadow 1px up and 1px left to an element */
+.shadow-reverse {
+    box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+/* set wrapper to minimum take up 100% of the viewport */
+#wrapper {
+  min-height: 100vh;
+}
+
+/* set header to fill 100% of the width of the screen, set it to always be visible at the top and above the other content by z-index.
+set it to fixed height 50px*/
+#header {
     width: 100%;
     position:fixed;
     z-index:99999;
     top:0;
-}
-
-.header {
     height:50px;
 }
 
-.content-wrapper {
+/* set footer to fill 100% fo the width of the screen, position is set to relative since we tell the content wrapper to
+fill out any remaining space betwee top & footer to fill out wrapper that was 100% viewport height */
+#footer {
+    width: 100%;
+    position:relative;
+    bottom:0;
+}
+
+/* set content area to be max wdith 1000px the 50px padding makes it so that the content appears under the header when scrolled to the top
+margin left & right centers the wrapper */
+#content {
     max-width: 1000px;
-    margin-top:50px;
+    padding-top:50px;
     margin-left:auto;
     margin-right:auto;
 }
 
+/* add 5 px left padding and 50px margin under to the section headers */
 .section-header {
     padding-left:5px;
     margin-bottom:10px;
 }
 
+/* add 5px padding to the work description*/
 .work-description {
     padding:5px;
 }
 
+/* add 5px padding to the school description (i could make a 5px padding class instead but time is a limiting factor now) */
 .school-description {
     padding:5px;
 }
 
+/* add position relative to education entry in order for the overlay to fit corretly the width is set to
+321 px in order for 3 elements to fit on the horizontal axis before reaching the max-width of the content wrapper*/
 .education-entry {
     position:relative;
     width: 321px;
     margin: 5px;
 }
 
+/* same as education-entry */
 .work-entry {
     position:relative;
     width: 321px;
     margin: 5px;
 }
 
+/* set job picture height to 250px and max-width too 100%, Those widths and heights have also been done on the source pictures
+but keeping these properties here to ensure the size of the picture in case i've done something wrong on the source pictures */
 .job-pic {
     height:250px;
     max-width:100%;
 }
 
+/* same as job-pc */
 .edu-pic {
     height:250px;
     max-width:100%;
 }
 
+/* creates an overlay class that positions itself at the top left of its container and expands 100% on the width, with padding 10px on top & bottom. */
 .overlay {
     display:block;
     position:absolute;
@@ -246,11 +312,14 @@ h4 {
     width:100%;
 }
 
+/* since im fixing a footer on the the work and education entries, im also creating an empty div that takes up the same space
+so that the content above the fixed footer wont overlap, the spacer class holds the properties applied to the empty div*/
 .spacer {
     height:52px;
     width:100%;
 }
 
+/* this class fixes an element to the bottom right of its container */
 .fixed-bottom {
     display:block;
     position:absolute;
@@ -258,6 +327,8 @@ h4 {
     right:0;
     width:100%;
 }
+
+/* sets date-location-text to align right with padding right and bottom of 5px and fontsize 12 px */
 .date-location-text {
     text-align:right;
     padding-right: 5px;
@@ -265,15 +336,25 @@ h4 {
     font-size:12px;
 }
 
+/* add 5px margin to the bio container */
 .bio-container {
     margin:5px;
 }
 
+/* add 5px margin & padding to the projects container */
+.projects-container {
+    margin:5px;
+    padding:5px;
+}
+
+/* add size and padding to a div element that contains the bio picture */
 .bio-pic-sizer {
     width:150px;
     padding:10px;
 }
 
+/* set max height and max width of the bio picture to 100% (uses the bio-pic-slizer size) and centers it with margin auto
+also creates a 2px white border and makes the picture round by border-radius 50% */
 .bio-pic {
     max-width:100%;
     max-height:100%;
@@ -282,12 +363,21 @@ h4 {
     border-radius:50%;
 }
 
+/* add margin 5px and padding 5px to the skills-header */
 .skills-header {
     margin: 5px;
     padding: 5px;
 }
 
+/*add margin & padding on the skills entry and make a 2px rounding of the corners of the element*/
 .skill-entry {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+/* same as skill entry but for the contact entries in the footer*/
+.contact-entry {
     margin: 5px;
     padding: 5px;
     border-radius: 2px;

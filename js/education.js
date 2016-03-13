@@ -1,7 +1,8 @@
 var education = {
     "htmlOuterTemplate": "<div class=\"education-entry bgcolor-white border shadow\"></div>",
     "htmlInnerTemplates": [{
-        "picture": "<img class=\"edu-pic\" src=\"%data%\"></img>"
+        "picture": "<img class=\"edu-pic\" src=\"%data%\" ",
+        "alt": "alt=\"%data%\"></img>"
     }, {
         "url": "<div class=\"overlay bgcolor-1-op text-center\"><a target=\"_blank\" href=\"%data%\">",
         "name": "%data%",
@@ -16,41 +17,47 @@ var education = {
         "name": "Frederiksberg Gymnasium",
         "location": "Copenhagen, Frederiksberg, Denmark",
         "degree": "Gymnasium",
-        "description": "Mathematics, Physics, Computer Science",
-        "dates": "01/01/2009 - 01/01/2015",
+        "description": "Completed Gymnasium with the focus areas: Mathematics, Physics, Computer Science<br><br>\
+                        Gymnasium is the educational level between elementary school and university in Denmark",
+        "dates": "2005 - 2008",
         "url": "http://www.frberg-gym.dk/",
-        "picture": "http://www.mimoa.eu/images/29015_l.jpg"
+        "picture": "images/Frberggymn.png",
+        "alt": "Picture of Frederiksberg-Gymnasium"
     }, {
         "name": "Copenhagen Business School",
         "location": "Copenhagen, Frederiksberg, Denmark",
         "degree": "Bachelor",
-        "description": "Business Administration",
-        "dates": "01/01/2009 - 01/01/2015",
+        "description": "Completed a Bachelor in Business Administration",
+        "dates": "2010 - 2013",
         "url": "http://www.cbs.dk/",
-        "picture": "https://passport.gwu.edu/_customtags/ct_Image.cfm?Image_ID=12566"
+        "picture": "images/CBS.png",
+        "alt": "Picture of Copenhagen Business School"
     }, {
         "name": "Luleå Technical University",
         "location": "Luleå, Sweden",
         "degree": "Bachelor Courses",
-        "description": "Java, C#, Introductory Web Development, CMS, Knowledge Management",
+        "description": "Distance studying the following IT courses:<br>Java, C#, Introductory Web Development, CMS, Knowledge Management",
         "dates": "18/01/2016 - 31/06/2016 (expected)",
         "url": "http://www.ltu.se",
-        "picture": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Lule%C3%A5_University_of_Technology_2011.jpg"
+        "picture": "images/LTU.png",
+        "alt": "Picture of Luleå Technical University"
     }, {
         "name": "Örebro University",
         "location": "Örebro, Sweden",
         "degree": "Bachelor Courses",
-        "description": "Programming in C",
+        "description": "Distane studying a course called:<br>Programming in C",
         "dates": "18/01/2016 - 31/06/2016 (expected)",
         "url": "http://www.oru.se",
-        "picture": "http://www.busspojken.com/stad/orebro/623-18.JPG"
+        "picture": "images/ORU.png",
+        "alt": "Picture of Örebro University"
     }, {
         "name": "Udacity.com",
         "location": "Online",
         "degree": "Online degree",
-        "description": "Front End Web Developer",
+        "description": "Taking a Front End Web Developer Nanodegree at Udacity to fill up any spare time i have between my university courses.",
         "dates": "18/01/2016 - 31/06/2016 (expected)",
         "url": "http://www.udacity.com",
-        "picture": "https://tm-prod.global.ssl.fastly.net/uploaded/companies/259/office/300/f1.jpg?v=None"
+        "picture": "images/Udacity.png",
+        "alt": "Picture of Udacity.com office"
     }]
 };

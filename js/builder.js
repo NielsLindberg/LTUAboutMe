@@ -1,3 +1,5 @@
+//To clear any doubts I can confirm that I wrote the below function myself. /Niels Lindberg-Poulsen
+
 //Generic function to display the different data in the different js objects.
 var displayStuff = function(parentContainer, sectionContainer, parentObject, sectionArray, outerTemplate) {
     "use strict";
@@ -18,15 +20,18 @@ var displayStuff = function(parentContainer, sectionContainer, parentObject, sec
                 if (arrayObject.hasOwnProperty(concatObjectKey)) {
 
                     //in case the data is an array add a dom element for each value in it
+                    //on the bio.skills it adds an inner dom template for each value in the skills array.
                     var currentValue = arrayObject[concatObjectKey];
                     if (currentValue.constructor === Array) {
                         currentValue.forEach(function(arrayObjectValue) {
+
+                            //takes the dom template and replaces all instances of %data% with the arrayValue
                             formattedDom = formattedDom + concatObject[concatObjectKey].replace(/%data%/g, arrayObjectValue);
                         });
 
                         //else just add the dom element once
                     } else {
-                        formattedDom = formattedDom + concatObject[concatObjectKey].replace('%data%', currentValue);
+                        formattedDom = formattedDom + concatObject[concatObjectKey].replace(/%data%/g, currentValue);
                     }
                 }
             });
@@ -36,9 +41,3 @@ var displayStuff = function(parentContainer, sectionContainer, parentObject, sec
         });
     });
 };
-
-
-displayStuff('#bioContainer', '#bioContainer', bio, bio.headerInfo, '');
-displayStuff('#bioContainer', '#skills-list', bio, bio.skillsInfo, bio.htmlOuterSkills);
-displayStuff('#educationContainer', '.education-entry:last', education, education.schools, education.htmlOuterTemplate);
-displayStuff('#workExperienceContainer', '.work-entry:last', work, work.jobs, work.htmlOuterTemplate);
